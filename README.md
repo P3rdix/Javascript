@@ -17,5 +17,3 @@
 * Variable types, methods of declarations and operations
 * Arrays
 * Basic syntaxes
-* Functions
-
