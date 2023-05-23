@@ -10,10 +10,15 @@
 
 ​	Javascript does not require a compiler; it was deigned to run on a web browser, and therefore will work on any device containing one. One may, if they so desire, choose to use online compilers and editors to run their designs. Many sites , such as scrimba and freecodecamp.org provide this facility.
 
-​	The following folders cover the topics given below:
+​	The following folders contain the given contents
 
-### Variables_and_syntax
+### syntax
 
 * Variable types, methods of declarations and operations
-* Arrays
-* Basic syntaxes
+* Operators and their precedence
+* Functions
+* Objects
+
+### Project1
+
+* Color Flipper
