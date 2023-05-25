@@ -1,29 +1,34 @@
 var num = 0;
+var teams = [];
+var form = document.getElementById("Teams");
 
-function getData(form) {
-    var formData = new FormData(form);
-    let temp = []
-    for(var pair of formData.entries()) {
-        temp.push(pair)
-        console.log(pair[0] + " : " + pair[1]);
+function getData(){
+    const data = new FormData(form);
+    for(const [name,value] of data){
+        if(name=="Matches"){
+            num = value;
+        }
+        else{
+            teams.push(value);
+        }
     }
-    console.log("Bye");
-    return temp
+    console.log(teams.length);
 }
 
-document.getElementById("Teams").addEventListener("submit", function (e) 
+form.addEventListener("submit", function (e) 
     {
         e.preventDefault;
-        let data = getData(e.target);
+        getData();
+        console.log(teams);
     });
 
 var add = function() {
-    var added = document.createElement("div");
-    document.getElementById("Teams").appendChild(added);
-    added.setAttribute("id", "Team " + document.getElementById("Teams").childElementCount);
-    added.appendChild(document.createElement("input"));
-    added.appendChild(document.createElement("br"));
+    var added = document.createElement("input");
+    form.appendChild(added);
+    added.setAttribute("name", "Team " + document.getElementById("Teams").childElementCount-1);
+    form.appendChild(document.createElement("br"));
   };
+
 
 function create_table(data){
     
